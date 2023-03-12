@@ -8,6 +8,10 @@ body {
     font-family: "Arial Unicode MS", sans-serif;
 }
 
+::-webkit-scrollbar {
+    width: 0;
+}
+
 main {
     width: 70vw;
     margin: 1rem auto;
