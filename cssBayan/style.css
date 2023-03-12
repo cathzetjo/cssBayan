@@ -91,6 +91,10 @@ input{
     text-align: center;
 }
 
+img {
+    width: 400px;
+}
+
 .memes-container input:checked + .title + .content {
     max-height: 450px;
 }
@@ -118,3 +122,61 @@ input{
     transform: rotate(90deg);
 }
 
+@media (hover: hover) {
+    /* when hover is supported */
+    .memes-container input:hover + .title {
+        color: white;
+        background-color: black;
+    }
+}
+
+@media screen and (max-width: 820px) {
+    body {
+        font-size: 1.2rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+        margin: 1rem;
+        padding: 0 1rem;
+    }
+
+    h1,
+    .memes-container {
+        padding: 0 1rem;
+    }
+
+    main {
+        width: 90vw;
+        margin: .5rem auto;
+    }
+
+    img {
+        width: 350px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    body {
+        font-size: .8rem;
+    }
+    h1 {
+        font-size: 1rem;
+    }
+
+    .memes-container:hover .title:before,
+    .memes-container:hover .title:after {
+        right: 0.6rem;
+        top: 0.8rem;
+        width: 0.1rem;
+        height: 0.5rem;
+    }
+}
+
+@media screen and (max-width: 450px) {
+
+    img {
+        width: 250px;
+    }
+
+}
