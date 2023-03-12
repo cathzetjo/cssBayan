@@ -1,0 +1,116 @@
+html,
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #e3ebf1;
+    color: black;
+    font-size: 1.5rem;
+    font-family: "Arial Unicode MS", sans-serif;
+}
+
+main {
+    width: 70vw;
+    margin: 1rem auto;
+}
+
+h1 {
+    font-size: 2rem;
+    margin: 1rem;
+    padding: 0 2rem;
+}
+
+h1,
+.memes-container {
+    padding: 0 2rem;
+}
+
+.memes-container {
+    display: flex;
+    flex-direction: column;
+    gap: .2rem;
+}
+
+.memes-container .meme-container {
+    position: relative;
+}
+
+input{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    opacity:0;
+    cursor: pointer;
+}
+
+.memes-container .title {
+    background: transparent;
+    padding: .5rem 1rem;
+    display: block;
+    font-weight: bold;
+    transition: all .5s ease-in-out;
+    cursor: pointer;
+    border-radius: 1rem;
+}
+
+.memes-container:hover .title {
+    background: gray;
+}
+
+.memes-container:hover .title:before,
+.memes-container:hover .title:after {
+    content: "";
+    position: absolute;
+    right: 2rem;
+    top: 1rem;
+    width: .25rem;
+    height: 1rem;
+    background-color: #fff;
+    transition: all 0.5s ease-in-out;
+}
+
+.memes-container .title:after {
+    transform: rotate(90deg);
+}
+
+.memes-container .content {
+    display: flex;
+    padding: .5rem 0;
+    align-content: center;
+    justify-content: center;
+    max-height: 0;
+    overflow: hidden;
+    background-color: transparent;
+    color: black;
+    transition: all 0.5s ease-in-out;
+    text-align: center;
+}
+
+.memes-container input:checked + .title + .content {
+    max-height: 450px;
+}
+
+.memes-container input:checked + .title {
+    color: white;
+    background-color: black;
+}
+
+.memes-container input:checked + .title:before {
+    transform: rotate(90deg);
+}
+
+.memes-container input:not(:checked):hover + .title + .content {
+    max-height: 450px;
+    transition: all 0.5s ease-in-out;
+}
+
+.memes-container input:hover + .title {
+    color: white;
+    background-color: black;
+}
+
+.memes-container input:hover + .title:before {
+    transform: rotate(90deg);
+}
+
